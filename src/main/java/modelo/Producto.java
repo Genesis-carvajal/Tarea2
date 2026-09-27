@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author carva
@@ -54,4 +56,12 @@ public class Producto {
     public int getCantidadDisponible() {
         return cantidadDisponible;
     }
-}
+    
+    public void informacionProducto(){
+        JOptionPane.showMessageDialog(null, "Código: "+codigo
+                + "Nombre: "+nombre
+                + "Precio: "+precio
+                + "Cantidad disponible: "+cantidadDisponible);
+    }//Fin de método informacionProducto.
+    
+}//Cierre de la clase Producto.

@@ -5,12 +5,14 @@
 package main;
 
 import javax.swing.JOptionPane;
+import modelo.Inventario;
 
 /**
  *
  * @author carva
  */
 public class Menu {
+    Inventario iv = new Inventario();
     private int opcion;
     
     public void menuPrincipal() {
@@ -27,6 +29,7 @@ public class Menu {
                                                                   """));
             switch(opcion){
                 case 1:
+                    iv.Registrar();
                     break;
                 case 2:
                     break;
