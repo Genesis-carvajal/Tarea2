@@ -44,6 +44,7 @@ public class Menu {
                     iv.Reabastecer();
                     break;
                 case 6:
+                    iv.calcularTotal();
                     break;
                 case 7:
                     JOptionPane.showMessageDialog(null, "Has salido del menú...");
