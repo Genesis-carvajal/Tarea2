@@ -32,19 +32,24 @@ public class Menu {
                     iv.Registrar();
                     break;
                 case 2:
+                    iv.Mostrar();
                     break;
                 case 3:
                     iv.Buscar();
                     break;
                 case 4:
+                    iv.Vender();
                     break;
                 case 5:
+                    iv.Reabastecer();
                     break;
                 case 6:
                     break;
                 case 7:
+                    JOptionPane.showMessageDialog(null, "Has salido del menú...");
                     break;
                 default:
+                    JOptionPane.showMessageDialog(null, "Opción no disponible");
             }
             
         } while (opcion != 7);
