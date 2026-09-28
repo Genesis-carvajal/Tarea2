@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class Inventario {
     Producto producto = new Producto();
-    private Producto[][] productos = new Producto[10][10];
+    private Producto[][] productos = new Producto[5][5];
     
     public void Registrar() {
         for (int i = 0; i < productos.length; i++) {
@@ -51,6 +51,49 @@ public class Inventario {
                 JOptionPane.showMessageDialog(null, "Edad: " + productos[i][j].getCantidadDisponible());
             }//Fin del segundo método For.
         }//Fin del primer método For  
+        
+    }//Fin del método Registrar.  
+    
+    public void Mostrar(){
+            String matriz = "Indices (FILA, COLUMNA)\n";
 
-    }//Fin del método Registrar.
+            for (int i = 0; i < productos.length; i++) { //Recorre la fila. (i = fila).
+                for (int j = 0; j < productos[i].length; j++) { //Recorre la columna. (j = columna)
+                    matriz += "(" + i + " , " + j + ") = " + productos[i][j]; //almacena y acumula.
+                }//Fin del segundo método For.
+                matriz += "\n";
+            }//Fin del primer método For.
+            JOptionPane.showMessageDialog(null, matriz);
+            }//Fin del método Buscar.
+    
+    public void Buscar() {
+        int entrada = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el código a buscar:"));
+
+        if (entrada == -1) {
+            JOptionPane.showMessageDialog(null, "El código debe ser ingresado");
+        }//Fin de If.
+
+        int fila = -1;
+        int columna = -1;
+
+        for (int i = 0; i < productos.length; i++) {
+            for (int j = 0; j < productos[i].length; j++) {
+                if (productos[i][j] != null && productos[i][j].getCodigo() == entrada) {
+                    fila = i;
+                    columna = j;
+                    break;
+                }//Fin método if.
+            }//Fin del segundo método For.
+        }//Fin del tercer método For.
+        
+        if (fila != -1) {
+            JOptionPane.showMessageDialog(null,"El código " + entrada + " se encontró en la posición ["
+                    + fila + "][" + columna + "]"
+            );
+        } else {
+            JOptionPane.showMessageDialog(null,"El código " + entrada + " no existe en el arreglo."
+            );
+        }
+    }//Fin del método Buscar.
+
 }//Cierre de la clase Inventario.
