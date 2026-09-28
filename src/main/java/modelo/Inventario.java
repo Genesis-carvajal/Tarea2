@@ -27,22 +27,6 @@ public class Inventario {
             
         }//Fin del primer método For.
 
-        for (int i = 0; i < productos.length; i++) {
-                JOptionPane.showMessageDialog(null, "Codigo: " + productos[i].getCodigo());
-        }//Fin del primer método For.
-
-        for (int i = 0; i < productos.length; i++) {
-            JOptionPane.showMessageDialog(null, "Nombre: " + productos[i].getNombre());   
-        }//Fin del primer método For.
-
-        for (int i = 0; i < productos.length; i++) {
-                JOptionPane.showMessageDialog(null, "Precio: " + productos[i].getPrecio());
-        }//Fin del primer método For.
-
-        for (int i = 0; i < productos.length; i++) {
-                JOptionPane.showMessageDialog(null, "Cantidad: " + productos[i].getCantidadDisponible());
-        }//Fin del primer método For  
-
     }//Fin del método Registrar.  
 
     public void Mostrar() {
